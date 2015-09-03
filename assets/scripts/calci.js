@@ -14,4 +14,7 @@ $(document).ready(function(){
  $("#preview").html($("#preview").html()+ input);
     }
   });
+ $("#calculator #delete").dblclick(function(){
+  $("#preview").html("");
+ });
 });
