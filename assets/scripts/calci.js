@@ -58,8 +58,7 @@ var Calci = {
     Calci.handleInput('-');
    } 
   }else {
-    lastChar = Calci.getLastChar();
-    if(['+','-','*','/'].indexOf(lastChar) != -1){
+    if(Calci.checkLastCharIsOperator()){
      Calci.handleDelete();
     }
   Calci.handleInput(operator);
@@ -73,6 +72,9 @@ var Calci = {
   }
 },
  evaluateResult: function (){
+  if(Calci.checkLastCharIsOperator()){
+    Calci.handleDelete();
+  }
   $("#result").html(eval($("#preview").html()));
   },
   clearResult: function(){
@@ -100,6 +102,11 @@ var Calci = {
    
    return str[str.length - 1];
     }
+  },
+  checkLastCharIsOperator: function(){
+    lastChar = Calci.getLastChar();
+    return (['+','-','*','/'].indexOf(lastChar) != -1);
+
   }
 };
   
