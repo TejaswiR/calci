@@ -21,6 +21,15 @@ var Calci = {
       Calci.handleInput(digit);
       });
     });
+    $(document).bind('keyup','.', function(){
+        lastNumber = Calci.getlastNumber();
+        if(lastNumber.indexOf('.') == -1){
+          if(lastNumber.length == 0 ){
+            Calci.handleInput(0);
+          }
+          Calci.handleInput('.');
+        }
+    });
       $(document).bind('keyup','backspace', function(){
         Calci.handleDelete ();
     });
@@ -49,6 +58,16 @@ var Calci = {
   },
   clearResult: function(){
     $('#result').html('');
+  },
+  getlastNumber: function(){
+    str = $ ("preview").html();
+    regexp = /[+\-*\/]?([0-9.])*$/
+    matches = str.match(regexp);
+    if (matches == null ){
+      return str;
+    } else{
+      return matches[0].slice(1);
+    }
   }
 };
   
