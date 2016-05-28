@@ -1,9 +1,11 @@
 body {
   height: 100vh;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../images/numbers.jpg");
+  background-position: cover; }
 
 #calculator {
-  width: 100vmin;
+  width: 80vmin;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -12,14 +14,14 @@ body {
     background-color: transparent;
     color: inherit; }
   #calculator #result {
-    background-color: #F3F3F3;
+    background-color: #999999;
     height: 20.8vmin;
     text-align: right;
     line-height: 20.8vmin;
     font-size: 14vmin;
     font-weight: 100; }
   #calculator #preview {
-    background-color: #F2F2F2;
+    background-color: #999999;
     height: 11.2vmin;
     font-size: 6vmin;
     line-height: 11.2vmin;
@@ -42,7 +44,7 @@ body {
   #calculator #operators {
     text-align: center; }
     #calculator #operators .operator {
-      background-color: #636363;
+      background-color: #40E0D0;
       color: #F3F3F3;
       height: 12.8vmin;
       margin: 0 -15px;
