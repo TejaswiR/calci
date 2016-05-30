@@ -1,3 +1,4 @@
+(function(){
 var Calci = {
  init: function(){
   $('#calculator .input').click (function(){
@@ -112,4 +113,5 @@ var Calci = {
   
   $(document).ready(function(){
   Calci.init();
-});
+ });
+})();
